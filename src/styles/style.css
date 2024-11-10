@@ -1,0 +1,216 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(24, 24, 24);
+    font-family: "Poppins", sans-serif, 'Arial Narrow Bold', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 20vh 70vh;
+}
+
+header {
+   
+   grid-column: 1;
+   grid-row: 1;
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-left: 5vh;
+
+
+}
+
+.weather-img {
+    width: 10vh;
+    min-width: 60px;
+    height: 10vw;
+    min-height: 60px;
+    margin-right: 5vh;
+    
+}
+
+.search-container {
+
+    grid-row: 2;
+    margin: auto;
+    padding-top: 20px;
+
+}
+
+#city-input {
+    width: 300px;
+    height:15px;
+    font-family: "Poppins", sans-serif, 'Arial Narrow Bold', sans-serif;
+    outline: none;
+    border: none;
+    background: #eeeeee;;
+    color: var(--text);
+    font-size: 0.9em;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 45px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+   
+}
+
+
+
+#search-button {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 30px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+#search-button:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+#search-button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+#search-button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+#search-button:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#search-button:disabled:hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+#search-button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#search-button:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+#search-button:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.weather-info-container {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 40px auto;
+    text-align: center;
+    align-items: center;    
+
+}
+
+
+/* wheater letters waving*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jersey+20&family=Rubik+Scribble&display=swap');
+:root {
+
+  --wavy-text-font-family: "Abril Fatface", serif;
+  --wavy-text-animation-speed: 1s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+svg {
+  fill: currentColor;
+  max-width: 100%;
+  min-width: 250px;
+  vertical-align: baseline;
+}
+
+.site-container {
+  
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#wavy-text {
+  font-family: var(--wavy-text-font-family);
+  font-size: 2rem;
+}
+
+#wavy-text .char {
+  transform: translateY(0);
+  transform-origin: center;
+  animation: wavyText var(--wavy-text-animation-speed) ease-in-out infinite;
+}
+
+#wavy-text .char:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+#wavy-text .char:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+#wavy-text .char:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+#wavy-text .char:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+#wavy-text .char:nth-child(5) {
+  animation-delay: 500ms;
+}
+#wavy-text .char:nth-child(6) {
+    animation-delay: 600ms;
+}
+
+#wavy-text .char:nth-child(7) {
+    animation-delay: 700ms;
+}
+  
+
+@keyframes wavyText {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  50% {
+    transform: translateY(2%);
+  }
+}

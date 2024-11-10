@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Weather website</title>
 </head>
 <body>
-    
+    <header>
+        
+    <div class="site-container">
+        <svg width="300" height="100" id="wavy-text">
+          <g>
+            <text y="50%" class="char">
+              W
+            </text>
+            <text y="50%" x="10%" class="char">
+              e
+            </text>
+            <text y="50%" x="16%" class="char">
+              a
+            </text>
+            <text y="50%" x="22%" class="char">
+              t
+            </text>
+            <text y="50%" x="27%" class="char">
+              h
+            </text>
+            <text y="50%" x="34%" class="char">
+                e
+            </text>
+            <text y="50%" x="40%" class="char">
+                r
+            </text>
+          </g>
+        </svg>
+      </div>
+        <img class="weather-img" src = "./assets/weather.svg" alt="weather SVG"/>
+      
+    </header>
+    <div class="search-container">
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <button id="search-button">Search</button>
+    </div>
+
+    <div id="weather-info" class="weather-info-container">
+        <h1 id="location" class="weather-location"></h1>
+        <h3 id="date" class="weather-date">Today</h3>
+        <div id="temperature" class="weather-detail"></div>
+        <div id="description" class="weather-detail"></div>
+        <div id="windspeed" class="weather-detail"></div>
+        <div id="humidity" class="weather-detail"></div>
+    </div>
+
 </body>
 </html>
