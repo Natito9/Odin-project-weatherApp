@@ -1,6 +1,6 @@
-import './styles/style.css';  
-import './styles/reset.css';  
-import './styles/images-icons.css';  
+import './style.css';  
+import './reset.css';  
+import './images-icons.css';  
 
 const apiKey = "58TEVGU65AYBDKTELB2WPDHTD";
 

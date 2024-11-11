@@ -5,17 +5,25 @@ module.exports = {
     entry: {
         app: "./src/index.js",
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-        //   title: "Production",
-        template: "./src/template.html",
-        }),
-    ],
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
+        publicPath: '/',
         clean: true,
     },
+    mode: 'development',
+    devServer: {
+      static: path.join(__dirname, 'dist'),  // Serve content from the dist directory
+      open: true,  // Automatically open the browser
+      port: 8080,  // Port 8080
+
+     
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/template.html',  // Path to your HTML template
+      }),
+    ],
     module: {
         rules: [
         {
